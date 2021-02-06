@@ -17,8 +17,4 @@ stow neovim
 - Buscar tu theme favorito en https://vimcolors.com/
 - Copiar el fichero en colors/theme_name
 - Actualizar settings/configs.vim `set color theme_name`
-
-
-
-
-
+hello world
