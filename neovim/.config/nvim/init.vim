@@ -1,3 +1,3 @@
-
-source $HOME/.config/nvim/settings/configs.vim
-source $HOME/.config/nvim/settings/mappings.vim
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vim/vimrc
