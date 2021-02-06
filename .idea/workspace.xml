@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27f25b2-c61e-4964-8401-ac234d6d40b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vim/.vim/autoload/plugin.vim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vim/.vim/vimrc" beforeDir="false" afterPath="$PROJECT_DIR$/vim/.vim/vimrc" afterDir="false" />
-    </list>
+    <list default="true" id="c27f25b2-c61e-4964-8401-ac234d6d40b4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612570840202</updated>
       <workItem from="1612570843761" duration="200000" />
-      <workItem from="1612574292928" duration="480000" />
+      <workItem from="1612574292928" duration="996000" />
     </task>
     <servers />
   </component>
