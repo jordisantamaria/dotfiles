@@ -18,3 +18,13 @@ stow neovim
 - Copiar el fichero en colors/theme_name
 - Actualizar settings/configs.vim `set color theme_name`
 
+## Ranger dependency
+
+`brew install ranger`
+
+
+## NERDtree icons
+
+set guifont=DroidSansMono_Nerd_Font:h11
+
+vim :set guifont?

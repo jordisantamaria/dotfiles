@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27f25b2-c61e-4964-8401-ac234d6d40b4" name="Default Changelist" comment="" />
+    <list default="true" id="c27f25b2-c61e-4964-8401-ac234d6d40b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vim/.vim/ftplugin/python.vim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vim/.vim/ftplugin/typescript.vim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vim/.vim/settings/configs.vim" beforeDir="false" afterPath="$PROJECT_DIR$/vim/.vim/settings/configs.vim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vim/.vim/settings/plugins.vim" beforeDir="false" afterPath="$PROJECT_DIR$/vim/.vim/settings/plugins.vim" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +47,9 @@
       <option name="presentableId" value="Default" />
       <updated>1612570840202</updated>
       <workItem from="1612570843761" duration="200000" />
-      <workItem from="1612574292928" duration="996000" />
+      <workItem from="1612574292928" duration="1132000" />
+      <workItem from="1612665850043" duration="217000" />
+      <workItem from="1612749783610" duration="508000" />
     </task>
     <servers />
   </component>

@@ -5,5 +5,24 @@ Plug 'plasticboy/vim-markdown'
 Plug 'wincent/ferret'
 "For git
 Plug 'tpope/vim-fugitive'
+"Files explorer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+"quoting/parenthesizing cs"'
+Plug 'tpope/vim-surround'
+"For check syntax errors in multiple languages
+Plug 'scrooloose/syntastic'
+"Autocomplete like vscode
+"https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"typescript sintax
+Plug 'herringtondarkholme/yats.vim'
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-jade'
+Plug 'leafgarland/typescript-vim'
+Plug 'majutsushi/tagbar'
 call plug#end()
-
