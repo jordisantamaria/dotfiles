@@ -25,4 +25,11 @@ Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-jade'
 Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
+Plug 'nlknguyen/cloudformation-syntax.vim'
+"CSV
+Plug 'mechatroner/rainbow_csv'
+"Informative line in bottom
+Plug 'vim-airline/vim-airline'
+"Theme
+Plug 'morhetz/gruvbox'
 call plug#end()
