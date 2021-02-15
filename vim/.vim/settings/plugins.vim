@@ -15,7 +15,7 @@ Plug 'rbgrouleff/bclose.vim'
 "quoting/parenthesizing cs"'
 Plug 'tpope/vim-surround'
 "For check syntax errors in multiple languages
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 "Autocomplete like vscode
 "https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -35,5 +35,8 @@ Plug 'morhetz/gruvbox'
 "Remove and create files
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-eunuch'
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
+" Theme
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
