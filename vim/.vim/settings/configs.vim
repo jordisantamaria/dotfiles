@@ -12,7 +12,7 @@ set encoding=UTF-8
 set wildignore=*.ipynb,*/env/*,*/lambda_layer/*,*/python/*,*/.pytest_cache/*,*/tags,*/.idea/*,*/.vscode,*/.pytest_cache/*,*/.editorconfig,*.lock,*/tmp/*,*/dist/*,*/node_modules/*
 
 "to use :find  with current directory files recursively
-set path=.,**
+set path=.,~/dotfiles/vim/,./src/**
 
 color simple-dark
 "colorscheme gruvbox
@@ -30,14 +30,22 @@ let g:syntastic_check_on_wq = 0
 
 
 
-inoremap jk <ESC>
-nmap <C-n> :NERDTreeToggle<CR>
+"inoremap jk <ESC>
+map <C-n> :call NERDTreeToggleAndRefresh()<CR>
+
+function NERDTreeToggleAndRefresh()
+  :NERDTreeToggle
+  if g:NERDTree.IsOpen()
+    :NERDTreeRefreshRoot
+  endif
+endfunction
+
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 " open NERDTree automatically
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * NERDTree
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
@@ -94,3 +102,7 @@ nmap <silent> <space>rf <Plug>(coc-references)
 nmap <silent> <space>rn <Plug>(coc-rename)
 "スペースfmtでFormat
 nmap <silent> <space>fmt <Plug>(coc-format)
+
+
+
+map so :source Session.vim <cr>

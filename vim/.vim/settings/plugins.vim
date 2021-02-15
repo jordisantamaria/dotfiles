@@ -32,4 +32,8 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'vim-airline/vim-airline'
 "Theme
 Plug 'morhetz/gruvbox'
+"Remove and create files
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-startify'
 call plug#end()
