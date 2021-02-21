@@ -31,12 +31,14 @@ Plug 'mechatroner/rainbow_csv'
 "Informative line in bottom
 Plug 'vim-airline/vim-airline'
 "Theme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 "Remove and create files
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-eunuch'
 "Plug 'mhinz/vim-startify'
-" Theme
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'thaerkh/vim-workspace'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-repeat'
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'itchyny/vim-cursorword'
 call plug#end()

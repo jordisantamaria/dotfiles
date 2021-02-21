@@ -1,17 +1,6 @@
 {
-  "suggest.noselect": false,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "json",
-    "yaml",
-    "python",
-    "markdown",
-    "css",
-    "html"
-  ],
-  "prettier.eslintIntegration": true,
+  "prettier.eslintIntegration": false,
 
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoSearchPaths": true,

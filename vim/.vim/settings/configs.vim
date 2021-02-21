@@ -1,3 +1,4 @@
+let mapleader = ","
 
 "minimal
 set relativenumber number
@@ -10,9 +11,11 @@ set noswapfile "no generate .swp files
 set ignorecase smartcase "para hacer busqueda con minus o mayus si escribes en minuscula.
 set encoding=UTF-8
 set wildignore=*.ipynb,*/env/*,*/lambda_layer/*,*/python/*,*/.pytest_cache/*,*/tags,*/.idea/*,*/.vscode,*/.pytest_cache/*,*/.editorconfig,*.lock,*/tmp/*,*/dist/*,*/node_modules/*
+"to be able to copy and paste content out of vim
+set clipboard=unnamed
 
 "to use :find  with current directory files recursively
-set path=.,~/dotfiles/vim/,./src/**
+set path=.
 
 color simple-dark
 
@@ -108,27 +111,44 @@ map so :source Session.vim <cr>
 let g:python_highlight_all=1
 
 
-
-" configure treesitter
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
-
-" configure nvcode-color-schemes
-let g:nvcode_termcolors=256
-
-syntax on
-colorscheme nvcode " Or whatever colorscheme you make
+let g:workspace_create_new_tabs = 0  " enabled = 1 (default), disabled = 0
+nnoremap <space>s :ToggleWorkspace<CR>
+let g:workspace_persist_undo_history = 1  " enabled = 1 (default), disabled = 0
+let g:workspace_undodir='.undodir'
+let g:workspace_autosave_always = 1
+let g:workspace_autosave_untrailspaces = 0
 
 
-" checks if your terminal has 24-bit color support
-if (has("termguicolors"))
-    set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
+"NERD commenter
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+
+" Do whatever is needed to detect your terminal.  Many times, this is
+" a simple check of the $TERM or $TERM_PROGRAM environment variables.
+if $TERM == 'my-terminal'
+    " Set the kind of escape sequences to use.  Most use xterm-style
+    " escaping, there are a few that use the iterm (CursorShape) style
+    " sequences.  The two acceptable values to use here are: 'xterm'
+    " and 'iterm'.
+    let g:togglecursor_force = 'xterm'
 endif
+
