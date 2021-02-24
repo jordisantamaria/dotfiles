@@ -1,5 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
-TERM=xterm-256color
+if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+# TERM=xterm-256color
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
@@ -37,15 +38,17 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir vcs)
 POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_SHOW_CHANGESET=false
 
 # ENABLE_CORRECTION="false"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git osx sudo colorize history last-working-dir compleat zsh-completions zsh-history-substring-search zsh-autosuggestions zsh-syntax-highlighting warhol aws)
+plugins=(git osx sudo colorize history last-working-dir compleat zsh-completions history-substring-search zsh-autosuggestions zsh-syntax-highlighting warhol aws colored-man-pages docker docker-compose fancy-ctrl-z jira extract yarn)
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
+source $(dirname $(gem which colorls))/tab_complete.sh
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcxD
 
@@ -59,18 +62,23 @@ export PATH
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 export PATH
-
+# For NVIM config
+export PATH=$HOME/.local/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+JIRA_URL='https://nicosys.atlassian.net/'
+JIRA_RAPID_BOARD=false
+JIRA_NAME=santamaria.jordi
+JIRA_DEFAULT_ACTION='assigned'
 
 # ALIAS
-alias lc='colorls'
+alias lc='colorls -A --sd'
+alias l='colorls -lA --sd'
 
-alias ..='cd ..'
-alias commit='git commit -am'
-alias push='git push'
 alias ide='bash ~/scripts/ide.sh'
 export PATH=$PATH:/Applications/calibre.app/Contents/console.app/Contents/MacOS
 alias ls='ls -a'
 alias csvconv='bash ~/scripts/iconv.sh'
+alias python='python3'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
