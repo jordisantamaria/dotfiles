@@ -54,6 +54,7 @@ let g:which_key_map['v'] = [ '<C-W>v'                                          ,
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
 let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
 
+
 " Group mappings
 
 " a is for actions

@@ -35,7 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
+      Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/playground'
     " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'
@@ -48,15 +48,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Status Line
-    Plug 'glepnir/galaxyline.nvim'
+    " Status Line in bottom of window
+    Plug 'vim-airline/vim-airline'
+    "Ranger for nvim
     Plug 'kevinhwang91/rnvimr'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
-    " Rainbow brackets
-    Plug 'junegunn/rainbow_parentheses.vim'
+    " Rainbow csv
+    Plug 'mechatroner/rainbow_csv'
     " Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
@@ -67,12 +68,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Start Screen
     Plug 'mhinz/vim-startify'
-    " Vista
+    " Vista for see ctags
     Plug 'liuchengxu/vista.vim'
     " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
-    " Zen mode
-    Plug 'junegunn/goyo.vim'
     " Snippets
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
@@ -80,7 +79,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'metakirby5/codi.vim'
     " Better tabline
     Plug 'romgrk/barbar.nvim'
-    " undo time travel
+    " undo time travel TODO
     Plug 'mbbill/undotree'
     " Find and replace
     Plug 'ChristianChiarulli/far.vim'
@@ -97,20 +96,28 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wesQ3/vim-windowswap'
     " Markdown Preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
-    " Easily Create Gists
+    " Easily Create Gists TODO not works
     Plug 'mattn/vim-gist'
     Plug 'mattn/webapi-vim'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
-    " Intuitive buffer closing
+    " Intuitive buffer closing, with :Bdelete, delete buffer without remove window
     Plug 'moll/vim-bbye'
     " Debugging
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
-    " Neovim in Browser
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
-    " Rainbow brackets
-    " Plug 'luochen1990/rainbow'
+    "syntax vue and typescript
+    Plug 'herringtondarkholme/yats.vim'
+    Plug 'storyn26383/vim-vue'
+    Plug 'digitaltoad/vim-pug'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'pangloss/vim-javascript'
+    "To help learn jump in file
+    Plug 'tjdevries/train.nvim'
+    "file system
+    Plug 'jordisantamaria/vim-file-utils'
+
+
     " Async Linting Engine
     " TODO make sure to add ale config before plugin
     " Plug 'dense-analysis/ale'
@@ -127,16 +134,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Debug
     " Plug 'mfussenegger/nvim-dap'
     " Plug 'nvim-dap-virtual-text'
-    " Sneak
-    " Plug 'justinmk/vim-sneak'
+    "Treesitter 
     " Plug 'nvim-treesitter/nvim-treesitter-refactor'
     " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     " Plug 'romgrk/nvim-treesitter-context'
-    " Minimap
-    " Plug 'wfxr/minimap.vim'
-    " jsx syntax support
-    " Typescript syntax
-    " Plug 'HerringtonDarkholme/yats.vim'
     " Multiple Cursors
     " Plug 'terryma/vim-multiple-cursors'
     " Plug 'kaicataldo/material.vim'
@@ -144,8 +145,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'mg979/vim-xtabline'
     " Files
     " Plug 'tpope/vim-eunuch'
-    " Vim Wiki
-    " Plug 'https://github.com/vimwiki/vimwiki.git'
     " Better Comments
     " Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
@@ -153,9 +152,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'hardcoreplayers/spaceline.vim'
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
-    " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
     " Making stuff
     " Plug 'neomake/neomake'
     " Plug 'mhinz/vim-signify'

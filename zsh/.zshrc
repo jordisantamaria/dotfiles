@@ -66,6 +66,9 @@ export PATH
 export PATH=$HOME/.local/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 JIRA_URL='https://nicosys.atlassian.net/'
 JIRA_RAPID_BOARD=false
 JIRA_NAME=santamaria.jordi

@@ -13,6 +13,17 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
+"Copy from copy register
+nnoremap <C-m> "0p
+
+"zoom window
+noremap Zz <c-w>_ \| <c-w>\|
+noremap Zo <c-w>=
+
+" open the definition in a new split
+nnoremap <c-[> <c-w>g<c-]>
+nnoremap <silent> <C-\> :vert winc]<CR>
+
 if exists('g:vscode')
 
   " Simulate same TAB behavior in VSCode
@@ -43,6 +54,10 @@ else
   " shift + j to move down
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
+
+  " indent/unindent visual mode selection with tab/shift+tab
+  vmap <tab> >gv
+  vmap <s-tab> <gv
 
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
@@ -95,3 +110,8 @@ endif
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+
+" go to the end of the copied/yank text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]

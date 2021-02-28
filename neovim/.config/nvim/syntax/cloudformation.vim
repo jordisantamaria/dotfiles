@@ -1,16 +1,16 @@
 
 " This is an automatically generated syntax file created on Sat, 02 Sep 2017 06:29:58 GMT
 " Origin: https://github.com/NLKNguyen/cloudformation-syntax.vim
-set ft=yaml
+"set ft=yaml
 
 syn match CfmYamlResourceName "\<AWS::ApiGateway::Account\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::SpotFleet\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::SecurityGroupIngress\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::Subnet\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::SubnetNetworkAclAssociation\>" contained containedin=yamlFlowString,yamlPlainScalar
-syn match CfmYamlResourceName "\<AWS::EC2::SecurityGroupEgress\>" contained containedin=yamlFlowString,yamlPlainScalar
+syn match CfmYamResourceName "\<AWS::EC2::SecurityGroupEgress\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::SubnetRouteTableAssociation\>" contained containedin=yamlFlowString,yamlPlainScalar
-syn match CfmYamlResourceName \<AWS::EC2::SubnetCidrBlock\>" contained containedin=yamlFlowString,yamlPlainScalar
+syn match CfmYamlResourceName "\<AWS::EC2::SubnetCidrBlock\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::RouteTable\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::PlacementGroup\>" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlResourceName "\<AWS::EC2::SecurityGroup\>" contained containedin=yamlFlowString,yamlPlainScalar
@@ -195,4 +195,8 @@ syn match CfmYamlFunction "\<FindInMap\>" contained containedin=yamlPlainScalar,
 syn match CfmYamlFunction "\<Ref\>" contained containedin=yamlPlainScalar,yamlNodeTag
 hi link CfmYamlResourceName Constant
 hi link CfmYamlMainType Include
-hi link CfmYamlFunction Conditional"
+hi link CfmYamlFunction Conditionall
+
+syntax match Resource "AWS::Serverless::Api"
+highlight link Resource Constant
+
