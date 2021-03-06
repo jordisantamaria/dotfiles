@@ -77,4 +77,3 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 set t_Co=256
 
-echom ">^.^<"

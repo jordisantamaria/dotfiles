@@ -1,9 +1,9 @@
 " Basic Key Mappings
 
-imap <C-h> <C-w>h
-imap <C-j> <C-w>j
-imap <C-k> <C-w>k
-imap <C-l> <C-w>l
+inoremap <C-h> <C-w>h
+inoremap <C-j> <C-w>j
+inoremap <C-k> <C-w>k
+inoremap <C-l> <C-w>l
 " g Leader key
 let mapleader=" "
 " let localleader=" "
@@ -56,8 +56,8 @@ else
   xnoremap J :move '>+1<CR>gv-gv
 
   " indent/unindent visual mode selection with tab/shift+tab
-  vmap <tab> >gv
-  vmap <s-tab> <gv
+  vnoremap <tab> >gv
+  vnoremap <s-tab> <gv
 
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
@@ -115,3 +115,15 @@ inoremap <expr> <c-k> ("\<C-p>")
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
+
+"Source vim file
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+iabbrev adn and
+iabbrev tehn then
+iabbrev @@ santamaria.jordi@nicosys.jp
+
+inoremap <right> <nop>
+inoremap <left> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
