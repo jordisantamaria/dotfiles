@@ -24,6 +24,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'machakann/vim-highlightedyank'
   else
 
+    "syntax vue and typescript
+    Plug 'herringtondarkholme/yats.vim'
+    Plug 'storyn26383/vim-vue'
+    Plug 'digitaltoad/vim-pug'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'pangloss/vim-javascript'
     " Easymotion for highlight unique letters in every word to jump easyest with f
     Plug 'easymotion/vim-easymotion'
     " Surround
@@ -106,16 +112,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Debugging
     Plug 'puremourning/vimspector'
     Plug 'szw/vim-maximizer'
-    "syntax vue and typescript
-    Plug 'herringtondarkholme/yats.vim'
-    Plug 'storyn26383/vim-vue'
-    Plug 'digitaltoad/vim-pug'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'pangloss/vim-javascript'
     "To help learn jump in file
     Plug 'tjdevries/train.nvim'
     "file system
     Plug 'jordisantamaria/vim-file-utils'
+    "Replace operator
+    Plug 'romgrk/replace.vim'
+
 
 
     " Async Linting Engine

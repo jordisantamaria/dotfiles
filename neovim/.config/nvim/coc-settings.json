@@ -114,7 +114,8 @@
   //yaml
   "yaml.trace.server": "verbose",
 	"yaml.schemas": {
-		"https://cfn-schema.y13i.com/schema": "/cf*/*"
+    "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/sam.schema.json": "/cf*/sam/*",
+    "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/cloudformation.schema.json": "/cf*/*"
 	},
 	"yaml.customTags": [
     "!Ref",

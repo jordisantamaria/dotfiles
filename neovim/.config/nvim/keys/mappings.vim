@@ -127,3 +127,7 @@ inoremap <right> <nop>
 inoremap <left> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+"For move to line start line end
+noremap H 0
+noremap L $

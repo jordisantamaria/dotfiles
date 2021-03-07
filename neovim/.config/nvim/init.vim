@@ -55,6 +55,7 @@ else
   source $HOME/.config/nvim/plug-config/vimspector.vim
   source $HOME/.config/nvim/plug-config/vim-vue.vim
   luafile $HOME/.config/nvim/lua/nvim-ts-rainbow.lua
+  source $HOME/.config/nvim/plug-config/replace.vim
   
   command! Scratch lua require'tools'.makeScratch() 
 
@@ -77,3 +78,7 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 set t_Co=256
 
+augroup cloudformation
+  au!
+  au BufNewFile,BufRead *.yaml set filetype=cloudformation
+augroup END
