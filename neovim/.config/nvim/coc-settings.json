@@ -69,7 +69,9 @@
     "yaml",
     "json",
     "python",
-    "java"
+    "java",
+    "typescript",
+    "vue"
   ],
   "coc.preferences.hoverTarget": "float",
 
@@ -103,6 +105,39 @@
   "pyright.disableCompletion": false,
   "pyright.disableLanguageServices": false,
   "pyright.disableOrganizeImports": false,
+  
+  // vue
+  "vetur.format.defaultFormatter.pug": "none",
+  "vetur.useWorkspaceDependencies": true,
+  "vetur.validation.templateProps": true,
+
+  //yaml
+  "yaml.trace.server": "verbose",
+	"yaml.schemas": {
+		"https://cfn-schema.y13i.com/schema": "/cf*/*"
+	},
+	"yaml.customTags": [
+    "!Ref",
+    "!GetAtt",
+    "!GetAtt sequence",
+    "!fn",
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Cidr",
+    "!Sub",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select sequence",
+    "!Split",
+    "!Join sequence"
+	],
+	"yaml.validate": true,
+	"yaml.completion": true,
 
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
@@ -139,6 +174,13 @@
   /*     "trace.server": "verbose" */
   /*   } */
   /* }, */
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  },
 
   "bookmark.sign": "",
 
