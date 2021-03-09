@@ -118,7 +118,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jordisantamaria/vim-file-utils'
     "Replace operator
     Plug 'romgrk/replace.vim'
-
+    "Telescope
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    "Move between vim windows and tmux panes with same keys
+    Plug 'christoomey/vim-tmux-navigator'
 
 
     " Async Linting Engine

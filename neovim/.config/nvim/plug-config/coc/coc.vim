@@ -120,7 +120,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " " Do default action for previous item.
 " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " " Resume latest coc list.
-" nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" nnoremap <silent> <space>p :<C-u>CocListResume<CR>
 
 " Explorer
 let g:coc_explorer_global_presets = {

@@ -76,36 +76,9 @@
   "coc.preferences.hoverTarget": "float",
 
   // python config
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoSearchPaths": true,
-  "python.analysis.diagnosticMode": "openFilesOnly",
-  "python.analysis.stubPath": "typings",
-  "python.analysis.typeshedPaths": [],
-  "python.analysis.diagnosticSeverityOverrides": {},
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.useLibraryCodeForTypes": true,
-  "python.pythonPath": "python",
-  "python.venvPath": "",
+  "python.pythonPath": "python3",
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.local/bin/black",
-  "python.formatting.blackArgs": [],
-  "python.formatting.autopep8Path": "autopep8",
-  "python.formatting.autopep8Args": [],
-  "python.formatting.yapfPath": "yapf",
-  "python.formatting.yapfArgs": [],
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": false,
-  "python.linting.banditEnabled": false,
-  "python.linting.mypyEnabled": false,
-  "python.linting.pytypeEnabled": false,
-  "python.linting.prospectorEnabled": false,
-  "python.linting.pydocstyleEnabled": false,
-  "python.linting.pylamaEnabled": false,
-  "python.linting.pylintEnabled": false,
-  "pyright.disableCompletion": false,
-  "pyright.disableLanguageServices": false,
-  "pyright.disableOrganizeImports": false,
-  
+  "python.formatting.blackPath": "usr/local/Cellar/black/20.8b1_1/libexec/bin/black",
   // vue
   "vetur.format.defaultFormatter.pug": "none",
   "vetur.useWorkspaceDependencies": true,
@@ -114,8 +87,8 @@
   //yaml
   "yaml.trace.server": "verbose",
 	"yaml.schemas": {
-    "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/sam.schema.json": "/cf*/sam/*",
-    "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/cloudformation.schema.json": "/cf*/*"
+   // "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/cloudformation.schema.json": "/cf*/*"
+    "https://raw.githubusercontent.com/awslabs/goformation/v4.15.0/schema/sam.schema.json": "/cf*/*"
 	},
 	"yaml.customTags": [
     "!Ref",

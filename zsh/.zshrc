@@ -42,7 +42,7 @@ POWERLEVEL9K_SHOW_CHANGESET=false
 
 # ENABLE_CORRECTION="false"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git osx sudo colorize history last-working-dir compleat zsh-completions history-substring-search zsh-autosuggestions zsh-syntax-highlighting warhol aws colored-man-pages docker docker-compose fancy-ctrl-z jira extract yarn pipenv yarn-autocompletions)
+plugins=(git osx sudo colorize history last-working-dir compleat zsh-completions history-substring-search zsh-autosuggestions zsh-syntax-highlighting warhol aws colored-man-pages docker docker-compose fancy-ctrl-z jira extract yarn yarn-autocompletions)
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 bindkey '\e[A' history-beginning-search-backward

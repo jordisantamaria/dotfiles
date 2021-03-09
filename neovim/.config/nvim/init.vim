@@ -13,7 +13,6 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/functions.vim
 source $HOME/.config/nvim/keys/mappings.vim
-
 if exists('g:vscode')
   " VS Code extension
   source $HOME/.config/nvim/vscode/settings.vim
@@ -56,8 +55,7 @@ else
   source $HOME/.config/nvim/plug-config/vim-vue.vim
   luafile $HOME/.config/nvim/lua/nvim-ts-rainbow.lua
   source $HOME/.config/nvim/plug-config/replace.vim
-  
-  command! Scratch lua require'tools'.makeScratch() 
+  source $HOME/.config/nvim/plug-config/telescope.vim
 
   " source $HOME/.config/nvim/plug-config/sneak.vim
   " source $HOME/.config/nvim/plug-config/illuminate.vim
@@ -82,3 +80,6 @@ augroup cloudformation
   au!
   au BufNewFile,BufRead *.yaml set filetype=cloudformation
 augroup END
+
+"match extra spaces, with @<= we don't higlight the first part
+match Error /\v[a-z]@<=\s\s+/

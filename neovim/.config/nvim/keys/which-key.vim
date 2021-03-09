@@ -93,6 +93,7 @@ let g:which_key_map.b = {
       \ '0' : [':BufferGoto 0'          , 'buffer 0'],
       \ 'b' : [':BufferPick'            , 'pick buffer'],
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
+      \ 'o' : [':BufferCloseAllButCurrent', 'delete-other-buffers'],
       \ 'D' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'f' : ['bfirst'                 , 'first-buffer'],
       \ 'l' : ['blast'                  , 'last buffer'],
@@ -120,11 +121,11 @@ let g:which_key_map.d = {
       \ }
 
 " f is for find and replace
-let g:which_key_map.f = {
-      \ 'name' : '+find & replace' ,
-      \ 'f' : [':Farr --source=vimgrep'    , 'file'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
-      \ }
+" let g:which_key_map.f = {
+      " \ 'name' : '+find & replace' ,
+      " \ 'f' : [':Farr --source=vimgrep'    , 'file'],
+      " \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      " \ }
 
 " k is for task
 let g:which_key_map.k = {
