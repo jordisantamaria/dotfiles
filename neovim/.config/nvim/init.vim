@@ -55,7 +55,6 @@ else
   source $HOME/.config/nvim/plug-config/vim-vue.vim
   luafile $HOME/.config/nvim/lua/nvim-ts-rainbow.lua
   source $HOME/.config/nvim/plug-config/replace.vim
-  source $HOME/.config/nvim/plug-config/telescope.vim
 
   " source $HOME/.config/nvim/plug-config/sneak.vim
   " source $HOME/.config/nvim/plug-config/illuminate.vim
