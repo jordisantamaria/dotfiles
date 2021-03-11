@@ -49,6 +49,7 @@ luafile $HOME/.config/nvim/lua/nvim-ts-rainbow.lua
 source $HOME/.config/nvim/plug-config/replace.vim
 luafile $HOME/.config/nvim/lua/telescope-settings.lua
 source $HOME/.config/nvim/plug-config/telescope.vim
+" source ~/projects/nvcode-color-schemes.vim/colors/nvcode.vim
 
 " source $HOME/.config/nvim/plug-config/sneak.vim
 " source $HOME/.config/nvim/plug-config/illuminate.vim
@@ -68,10 +69,14 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 set t_Co=256
 
-augroup cloudformation
-  au!
-  au BufNewFile,BufRead *.yaml set filetype=cloudformation
-augroup END
+" augroup cloudformation
+  " au!
+  " au BufNewFile,BufRead *.yaml,*.yml set filetype=cloudformation
+" augroup END
 
 "match extra spaces, with @<= we don't higlight the first part
 match Error /\v[a-z]@<=\s\s+/
+
+" set runtimepath+=$HOME/.config/nvim/after/yaml.vim
+"for copy runtimepath output
+" :redir @* | echo &runtimepath | redir END

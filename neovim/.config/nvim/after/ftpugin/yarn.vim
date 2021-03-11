@@ -7,7 +7,7 @@ if exists("b:current_syntax")
 endif
 
 set ft=yaml
-syn match CfmYamlResourceName "AWS::.+::[a-zA-Z0-9]+" contained containedin=yamlFlowString,yamlPlainScalar
+syn match CfmYamlResourceName "AWS::.*::[a-zA-Z0-9]*" contained containedin=yamlFlowString,yamlPlainScalar
 syn match CfmYamlMainType "Resources" contained containedin=yamlBlockMappingKey
 syn match CfmYamlMainType "Parameters" contained containedin=yamlBlockMappingKey
 syn match CfmYamlMainType "Mappings" contained containedin=yamlBlockMappingKey
@@ -20,4 +20,5 @@ hi link CfmYamlFunction Conditionall
 
 
 let b:current_syntax = "cloudformation"
+
 
