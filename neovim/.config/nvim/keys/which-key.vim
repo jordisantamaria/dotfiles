@@ -169,14 +169,13 @@ let g:which_key_map.g = {
       \ 'd' : [':Gdiffsplit'                       , 'diff split'],
       \ 's' : [':Telescope git_status'              , 'Telescope status'],
       \ 'G' : [':Gstatus'                          , 'status'],
-      \ 'b' : [':Telescope git_status'              , 'Telescope branches'],
+      \ 'b' : [':Telescope git_branches'              , 'Telescope branches'],
       \ 'l' : [':Git log'                          , 'log'],
       \ 'r' : [':GRemove'                          , 'remove'],
       \ 'v' : [':GV'                               , 'view commits'],
+      \ '1' : [':diffget //2'                      , 'Diffget left'],
+      \ '3' : [':diffget //3'                      , 'Diffget right'],
       \ }
-" 
-" 
-" 
 
 " l is for language server protocol
 let g:which_key_map.l = {
