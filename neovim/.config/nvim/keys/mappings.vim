@@ -18,7 +18,6 @@ nnoremap <C-m> "0p
 
 "zoom window
 noremap Zz <c-w>_ \| <c-w>\|
-noremap Zo <c-w>=
 
 " open the definition in a new split
 nnoremap <c-[> <c-w>g<c-]>
@@ -129,5 +128,5 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 
 "For move to line start line end
-noremap H 0
+noremap H ^
 noremap L $
