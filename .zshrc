@@ -1,0 +1,1 @@
+/Users/jordisantamaria/.zshrc
