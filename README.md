@@ -4,6 +4,12 @@
 brew install kitty
 ```
 
+# Install powerlevel10k theme for terminal
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+
 ```
 gem install colorls
 ```
