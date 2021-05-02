@@ -73,10 +73,6 @@ export PATH=$HOME/.local/bin:$PATH
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
-JIRA_URL='https://nicosys.atlassian.net/'
-JIRA_RAPID_BOARD=false
-JIRA_NAME=santamaria.jordi
-JIRA_DEFAULT_ACTION='assigned'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/libpq/bin:$PATH"
