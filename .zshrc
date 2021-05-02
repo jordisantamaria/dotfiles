@@ -51,9 +51,6 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcxD
 
-# ls with icons
-alias lc='colorls -A --sd'
-alias l='colorls -lA --sd'
 
 
 
@@ -80,6 +77,13 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # ALIAS
 source $HOME/.aliases.sh
+alias n="nvim"
+alias ag='alias | grep'
+alias t='tmuxinator'
+alias ls='ls -a'
+# ls with icons
+alias lc='colorls -A --sd'
+alias l='colorls -lA --sd'
 
 
 export EDITOR=nvim
