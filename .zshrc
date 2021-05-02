@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-# Iterm with 256 colors
+# terminal with 256 colors
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -51,26 +51,10 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcxD
 
-
-
-
-# Setting PATH for Python 3.9
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 3.8
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-export PATH
-# For NVIM config
-export PATH=$HOME/.local/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
-
+# Fuzzy finder interminal
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
