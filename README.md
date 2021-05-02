@@ -1,3 +1,8 @@
+# Install kitty
+
+```
+brew install kitty
+```
 
 ```
 gem install colorls
