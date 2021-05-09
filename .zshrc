@@ -55,7 +55,11 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 
 # ALIAS
-source $HOME/.aliases.sh
+
+# For source custom stuff
+if [[ -f $HOME/.aliases.sh ]] then
+    source $HOME/.aliases.sh
+fi
 alias n="nvim"
 alias ag='alias | grep'
 alias t='tmuxinator'
