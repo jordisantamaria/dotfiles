@@ -63,6 +63,7 @@ alias ls='ls -a'
 # ls with icons
 alias lc='colorls -A --sd'
 alias l='colorls -lA --sd'
+alias gcam='git add . && git commit -m'
 
 
 export EDITOR=nvim
