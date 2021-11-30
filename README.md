@@ -38,6 +38,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 cd ~/.oh-my-zsh/custom/plugins/
 git clone https://github.com/unixorn/warhol.plugin.zsh.git warhol
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
 ```
 
 If some plugin installation is missing, go to github repository of that plugin and there should be the explanation for install It.
