@@ -31,6 +31,7 @@ ruby -v
 
 gem install bundler
 rbenv rehash
+gem install colorls
 
 
 # Install kitty
