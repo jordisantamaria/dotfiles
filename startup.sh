@@ -117,3 +117,8 @@ brew install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+
+# Install mongodb tools
+
+sudo apt-get update -y
+sudo apt-get install -y mongo-tools
