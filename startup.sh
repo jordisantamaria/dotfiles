@@ -51,7 +51,7 @@ git config --global user.name jordisantamaria
 
 # Install brew
 
-git clone https://github.com/Homebrew/brew homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet
 chmod -R go-w "$(brew --prefix)/share/zsh"
