@@ -64,6 +64,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo chown $(whoami):$(whoami) /var/run/docker.sock
 
 # Change apache port 80 to 81
+
 # sudo vim /etc/apache2/ports.conf
 # change 80 to 81
 # sudo vim /etc/apache2/sites-enabled/000-default.conf
@@ -83,3 +84,36 @@ brew install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+
+
+# Install snap for install flutter
+
+sudo rm /etc/apt/preferences.d/nosnap.pref
+sudo apt update
+sudo apt install snapd
+
+# Install flutter
+
+sudo snap install flutter --classic
+
+# Install android studio
+# Download from https://developer.android.com/studio#downloads
+# sudo mv ~/Descargas/android-studio /opt
+# sh /opt/android-studio/bin/studio.sh
+# android studio -> sdk manager -> sdk tools -> install Android SDK Command-line Tools
+flutter doctor --android-licenses
+# extra dependencies for flutter
+sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev
+flutter config --enable-linux-desktop
+
+
+# Pgadmin
+cd ~
+sudo mkdir /var/lib/pgadmin
+sudo mkdir /var/log/pgadmin
+sudo chown $USER /var/lib/pgadmin
+sudo chown $USER /var/log/pgadmin
+python3 -m venv pgadmin4
+source pgadmin4/bin/activate
+pip install pgadmin4
+pgadmin4

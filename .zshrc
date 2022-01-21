@@ -1,3 +1,4 @@
+sh ~/organizacion_pantallas.sh
 export ZSH=$HOME/.oh-my-zsh
 # terminal with 256 colors
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
@@ -42,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcxD
 
@@ -52,6 +53,11 @@ kitty + complete setup zsh | source /dev/stdin
 # Fuzzy finder interminal
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="~/programs/WebStorm-212.5457.55/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+clear
 
 
 # ALIAS
@@ -60,16 +66,28 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 if [[ -f $HOME/.aliases.sh ]] then
     source $HOME/.aliases.sh
 fi
-alias n="nvim"
+alias n="/home/jordi/.local/bin/lvim"
+alias nvim="/home/jordi/.local/bin/lvim"
 alias ag='alias | grep'
 alias t='tmuxinator'
-alias ls='ls -a'
+# alias ls='ls -a'
 # ls with icons
-alias lc='colorls -A --sd'
+alias ls='colorls -A --sd'
 alias l='colorls -lA --sd'
-alias gcam='git add . && git commit -m'
+alias phpstorm='nohup sh /home/jordi/programs/PhpStorm-212.5457.49/bin/phpstorm.sh >/dev/null 2>&1 &'
+alias webstorm='nohup sh /home/jordi/programs/WebStorm-212.5457.55/bin/webstorm.sh >/dev/null 2>&1 &'
+alias open='xdg-open'
+alias gcam="git add . && git commit -am "
+alias android='nohup sh /opt/android-studio/bin/studio.sh >/dev/null 2>&1 &'
+alias pgadmin='source ~/pgadmin4/bin/activate; nohup pgadmin4  >/dev/null 2>&1 &; deactivate; echo http://127.0.0.1:5050/'
 
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# to avoid error runing yarn serve in vue
+export NODE_OPTIONS=--openssl-legacy-provider
