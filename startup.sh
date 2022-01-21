@@ -51,11 +51,45 @@ git config --global user.name jordisantamaria
 
 # Install brew
 
-git clone https://github.com/Homebrew/brew homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet
 chmod -R go-w "$(brew --prefix)/share/zsh"
 
+# Install last version of node and npm
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install nodejs
+
+# Install yarn
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+
+# Install docker
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  focal stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# Docker permissions
+
+sudo chmod 666 /var/run/docker.sock
+sudo usermod -aG docker ${USER}
 
 # Install docker-compose
 
@@ -84,6 +118,11 @@ brew install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+
+# Install mongodb tools
+
+sudo apt-get update -y
+sudo apt-get install -y mongo-tools
 
 
 # Install snap for install flutter
