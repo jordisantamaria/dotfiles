@@ -156,3 +156,11 @@ python3 -m venv pgadmin4
 source pgadmin4/bin/activate
 pip install pgadmin4
 pgadmin4
+
+# Install nvim
+
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+mv squashfs-root /squashfs-root
+ln -s /squashfs-root/AppRun /usr/bin/nvim
