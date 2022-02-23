@@ -164,3 +164,11 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 mv squashfs-root /squashfs-root
 ln -s /squashfs-root/AppRun /usr/bin/nvim
+
+# Change node version
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+source ~/.zshrc
+nvm install v16.14.0
+
+# Install amplify
+npm install -g @aws-amplify/cli
