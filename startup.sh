@@ -118,6 +118,7 @@ brew install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+sudo apt-get -y install xclip #clipboard with nvim
 
 # Install mongodb tools
 
@@ -166,7 +167,7 @@ mv squashfs-root /squashfs-root
 ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 # Change node version
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.zshrc
 nvm install v16.14.0
 
