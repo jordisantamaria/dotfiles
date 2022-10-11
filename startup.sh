@@ -181,3 +181,8 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a6110855
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
+
+# install laravel dependencies
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.1-{curl,xml,mbstring}
