@@ -52,6 +52,7 @@ kitty + complete setup zsh | source /dev/stdin
 
 # Fuzzy finder interminal
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="~/programs/WebStorm-212.5457.55/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
