@@ -166,6 +166,7 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 mv squashfs-root /squashfs-root
 ln -s /squashfs-root/AppRun /usr/bin/nvim
+ln -s /squashfs-root/AppRun /usr/local/bin/nvim
 
 # Change node version
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
