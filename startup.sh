@@ -92,8 +92,9 @@ sudo chmod 666 /var/run/docker.sock
 sudo usermod -aG docker ${USER}
 
 # Install docker-compose
-
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+export COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+sudo sh -c "curl -L http://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+sudo sh -c "curl -L http://raw.githubusercontent.com/docker/compose/${COMPOSE_VERSION}/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chown $(whoami):$(whoami) /var/run/docker.sock
 
@@ -114,10 +115,11 @@ sudo chown $(whoami):$(whoami) /var/run/docker.sock
 brew install ranger
 sudo apt-get install libxext-dev
 pip install ueberzug
-brew install ripgrep
+sudo apt-get install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+sudo apt-get -y install xclip #clipboard with nvim
 npm install -G prettier-plugin-organize-imports # optimize imports when formating
 
 # Install mongodb tools
@@ -163,13 +165,28 @@ pgadmin4
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
 mv squashfs-root /squashfs-root
 ln -s /squashfs-root/AppRun /usr/bin/nvim
+ln -s /squashfs-root/AppRun /usr/local/bin/nvim
 
 # Change node version
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.zshrc
 nvm install v16.14.0
 
 # Install amplify
 npm install -g @aws-amplify/cli
+
+# Install composer
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+
+# install laravel dependencies
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.1-{curl,xml,mbstring}
