@@ -118,6 +118,7 @@ brew install ripgrep
 pip install pynvim
 brew install neovim-remote
 brew install fzf
+npm install -G prettier-plugin-organize-imports # optimize imports when formating
 
 # Install mongodb tools
 
