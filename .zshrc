@@ -1,4 +1,4 @@
- # sh ~/.screenlayout/home.sh
+sh ~/organizacion_pantallas.sh
 export ZSH=$HOME/.oh-my-zsh
 # terminal with 256 colors
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
@@ -53,7 +53,7 @@ kitty + complete setup zsh | source /dev/stdin
 # Fuzzy finder interminal
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/libpq/bin:$PATH"
-export PATH="~/programs//bin:$PATH"
+export PATH="~/programs/WebStorm-212.5457.55/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -72,31 +72,30 @@ alias ag='alias | grep'
 alias t='tmuxinator'
 # alias ls='ls -a'
 # ls with icons
-alias lc='colorls -A --sd'
+alias ls='colorls -A --sd'
 alias l='colorls -lA --sd'
-alias webstorm='nohup sh /home/jordi/programs/WebStorm-213.6461.79/bin/webstorm.sh . >/dev/null 2>&1 &'
+alias phpstorm='nohup sh /home/jordi/programs/PhpStorm-212.5457.49/bin/phpstorm.sh >/dev/null 2>&1 &'
+alias webstorm='nohup sh /home/jordi/programs/WebStorm-212.5457.55/bin/webstorm.sh . >/dev/null 2>&1 &'
+
 alias open='xdg-open'
 alias gcam="git add . && git commit -am "
 alias android='nohup sh /opt/android-studio/bin/studio.sh >/dev/null 2>&1 &'
 alias pgadmin='source ~/pgadmin4/bin/activate; nohup pgadmin4  >/dev/null 2>&1 &; deactivate; echo http://127.0.0.1:5050/'
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 
-export EDITOR=nvim
+export EDITOR=vim
 export VISUAL="$EDITOR"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-
+# to avoid error runing yarn serve in vue
+# export NODE_OPTIONS=--openssl-legacy-provider
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# force node version
-nvm use v16.14.0
-# nvm use v14
-
-# terminal output in english
-export LC_ALL=C
+# to change node version
+# nvm use 10.24.1
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
