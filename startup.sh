@@ -125,6 +125,7 @@ pip install pynvim
 brew install neovim-remote
 brew install fzf
 sudo apt-get -y install xclip #clipboard with nvim
+npm install -G prettier
 npm install -G prettier-plugin-organize-imports # optimize imports when formating
 
 # Install mongodb tools
