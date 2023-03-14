@@ -58,8 +58,8 @@ test -r ~/.zshrc && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/
 
 # Install last version of node and npm
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install node
 
 # Install yarn
 
