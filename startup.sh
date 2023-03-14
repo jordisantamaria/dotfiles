@@ -130,6 +130,7 @@ npm install -G prettier-plugin-organize-imports # optimize imports when formatin
 
 # Install cargo for install lvim
 curl https://sh.rustup.rs -sSf | sh
+source "$HOME/.cargo/env"
 
 # Install mongodb tools
 
