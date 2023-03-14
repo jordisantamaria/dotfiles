@@ -184,6 +184,11 @@ nvm install v16.14.0
 # Install amplify
 npm install -g @aws-amplify/cli
 
+# Install php
+
+sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath
+
+
 # Install composer
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
