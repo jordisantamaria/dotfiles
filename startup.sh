@@ -110,6 +110,9 @@ sudo chown $(whoami):$(whoami) /var/run/docker.sock
 # netstat -tlpn| grep apache
 # ss -tlpn| grep apache
 
+# Python
+
+sudo apt install python-is-python3
 
 # Useful tools for nvim
 
