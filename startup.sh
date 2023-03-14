@@ -128,6 +128,9 @@ sudo apt-get -y install xclip #clipboard with nvim
 npm install -G prettier
 npm install -G prettier-plugin-organize-imports # optimize imports when formating
 
+# Install cargo for install lvim
+curl https://sh.rustup.rs -sSf | sh
+
 # Install mongodb tools
 
 sudo apt-get update -y
