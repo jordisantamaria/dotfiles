@@ -205,3 +205,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install php8.1-{curl,xml,mbstring}
+
+# Install slack
+
+sudo snap install slack
