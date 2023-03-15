@@ -209,3 +209,7 @@ sudo apt install php8.1-{curl,xml,mbstring}
 # Install slack
 
 sudo snap install slack
+
+# Install webstorm
+
+sudo snap install webstorm --classic
