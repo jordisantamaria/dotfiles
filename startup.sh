@@ -172,7 +172,9 @@ pgadmin4
 
 # Install nvim
 
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+## last version stable not working, use 0.8.2 for now
+## curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/download/v0.8.2/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 ./squashfs-root/AppRun --version
