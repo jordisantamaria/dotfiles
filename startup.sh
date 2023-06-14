@@ -169,6 +169,8 @@ python3 -m venv pgadmin4
 source pgadmin4/bin/activate
 pip install pgadmin4
 pgadmin4
+# fix path
+# file -> preferences -> paths -> binaryPaths -> postgresql binary path -> /usr/bin
 
 # Install nvim
 
