@@ -234,3 +234,7 @@ sudo snap install webstorm --classic
 # Install postman
 
 sudo snap install postman
+
+# Install discord
+
+sudo snap install discord
