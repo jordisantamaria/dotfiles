@@ -230,3 +230,7 @@ sudo snap install slack
 # Install webstorm
 
 sudo snap install webstorm --classic
+
+# Install postman
+
+sudo snap install postman
