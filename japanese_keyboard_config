@@ -1,0 +1,5 @@
+# Linux mint
+
+1. Go to input method -> Japanese. Install and set input method framework Fcitx
+2. Go to languages -> Language support -> Install Japanese
+3. Go to fcitx configuration -> add input method -> unmark only show current language -> scroll down at the end will show mozc, include it.
