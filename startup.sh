@@ -148,6 +148,9 @@ sudo apt install snapd
 
 sudo snap install flutter --classic
 
+# Install Java17
+# debian version of https://www.oracle.com/java/technologies/downloads/#java17
+
 # Install android studio
 # Download from https://developer.android.com/studio#downloads
 # sudo mv ~/Descargas/android-studio /opt
