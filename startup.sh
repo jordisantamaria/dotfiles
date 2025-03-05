@@ -241,3 +241,20 @@ sudo snap install postman
 # Install discord
 
 sudo snap install discord
+
+# Install cursor
+
+# Download AppImage from https://www.cursor.com/
+# update permissions to AppImage
+chmod +x cursor-0.40.3x86_64.AppImage
+sudo mv cursor-0.40.3x86_64.AppImage /opt/cursor.appimage
+# Crear icono en menu de linux
+sudo mv ~/Downloads/cursor.png ./cursor.png
+sudo nano /usr/share/applications/cursor.desktop
+# Incluir
+[Desktop Entry]
+Name=Cursor
+Exec=/opt/cursor.appimage
+Icon=/opt/cursor.png
+Type=Application
+Categories=Development;
